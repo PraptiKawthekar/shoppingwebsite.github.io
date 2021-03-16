@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Website</title>
+  <link rel="stylesheet" href="index1.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+</head>
+<body>
+  
+  <!---navigation bar--->
+  <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><img src="logo cart.jpg"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="social-cell">
+          <i class="fa fa-facebook" style="size:350px;color:rgb(13, 117, 124)"></i>
+          <i class="fa fa-twitter" style="size:350px;color:rgba(19, 75, 139, 0.425)"></i>
+          <i class="fa fa-instagram" style="size:350px;color:rgba(255, 8, 0, 0.815)"></i>
+           </div>
+           
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"> <!---navbar shifted to right side--->
+                  <a class="nav-link" href="#">HOME </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PRODUCT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">REVIEW</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" >OFFER</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--- account page--->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="" >
+
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="loginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">login</button>
+                            <a href="">Forgot password</a>
+                        </form>
+                        <form id="Regform">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="email">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+  </section>
+  <!--- js for toggle form--->
+<script>
+    var loginForm = document.getElementById("loginForm ");
+    var Regform = document.getElementById("Regform");
+    var Indicator = document.getElementById("Indicator");
+    function register(){
+        Regform.style.transform="translateX(0px)";
+        loginForm.style.transform="translateX(0px)";
+        Indicator.style.transform="translateX(100px)";
+    }
+    function login(){
+        Regform.style.transform="translateX(300px)";
+        loginForm.style.transform="translateX(300px)";
+        Indicator.style.transform="translateX(0px)";
+    }
+ </script>
+</body>
+</html>
